@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!--html 4
+	<video src="m.MP4" width="720" height="480" controls="controls"></video>
+
+ -->
+
+	<!--html  5 -->
+
+
+	<video id="v" width="720" height="480" controls="controls" ontimeupdate="demo()">
+		<source src="j.MP4"></source>
+	</video>
+
+	<button>Click</button>
+	<br>
+	<h1 id="result"></h1>
+
+
+
+	<script>
+		function demo()
+		{
+			var video= document.getElementById("v");
+			var c_time = video.currentTime/60;
+			var t_time = video.duration/60;
+
+
+			var h = document.getElementById("result");
+			h.innerHTML = c_time.toFixed(2)+"/"+t_time.toFixed(2);
+		}
+		
+
+
+
+	</script>
+</body>
+</html>
